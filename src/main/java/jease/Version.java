@@ -18,7 +18,7 @@ package jease;
 
 public class Version {
 
-	private static int MAJOR = 3;
+	private static int MAJOR = 4;
 	private static int MINOR = 0;
 	private static int REVISION = 0;
 

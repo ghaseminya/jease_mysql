@@ -16,11 +16,11 @@
  */
 package jfix.db4o;
 
+import jfix.db4o.engine.PersistenceEngine;
+
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-
-import jfix.db4o.engine.PersistenceEngine;
 
 /**
  * Static wrapper around ObjectDatabase (with appropriate setup of the
@@ -36,7 +36,7 @@ public class Database {
 	private static ObjectDatabase odb;
 
 	static {
-		setPersistenceEngine("jfix.db4o.engine.PersistenceEnginePerst");
+		setPersistenceEngine("jfix.db4o.engine.PersistenceEngineMysql");
 	}
 
 	/**
