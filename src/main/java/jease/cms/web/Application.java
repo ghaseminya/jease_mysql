@@ -69,7 +69,7 @@ public class Application extends LoginWindow {
 	}
 
 	private void loginUser(User user) {
-		if (user != null && !user.isDisabled() && Users.isStored(user)) {
+		if (user != null && !user.isDisabled() && Users.isStored(user.getUserid())) {
 			notifyAboutMaintenance(user);
 			initSession(user);
 		}

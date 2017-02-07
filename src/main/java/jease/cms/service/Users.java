@@ -16,14 +16,11 @@
  */
 package jease.cms.service;
 
-import java.util.List;
-
-import jease.cmf.service.Nodes;
 import jease.cms.domain.Content;
 import jease.cms.domain.User;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
-import org.apache.commons.lang3.StringUtils;
+import java.util.List;
 
 public class Users {
 
@@ -31,7 +28,7 @@ public class Users {
 	 * Returns all users with administration rights.
 	 */
 	public static List<User> queryAdministrators() {
-		return Database.query(User.class, User::isAdministrator);
+		return Database.query("user", "isAdministrator=1");
 	}
 
 	/**
@@ -40,8 +37,7 @@ public class Users {
 	 * retrieve themselfes.
 	 */
 	public static List<User> queryModifiableByUser(final User user) {
-		return Database.query(User.class, $user -> user.isAdministrator()
-				|| user == $user);
+		return Database.query("user","isAdministrator=1");//must add a certificate!
 	}
 
 	/**
@@ -49,26 +45,21 @@ public class Users {
 	 * login is also compared to the email address of the user.
 	 */
 	public static User queryByLogin(final String login, final String password) {
-		return Database.queryUnique(
-				User.class,
-				$user -> (login.equals($user.getLogin()) || login.equals($user
-						.getEmail())) && $user.hasPassword(password));
+		return Database.queryUnique("user","username="+login+" password="+password);
 	}
 
 	/**
 	 * Returns a unique user for given login
 	 */
 	public static User queryByLogin(final String login) {
-		return Database.queryUnique(User.class,
-				$user -> login.equals($user.getLogin()));
+		return Database.queryUnique("user","username="+login);
 	}
 
 	/**
 	 * Returns a unique user for given email address.
 	 */
 	public static User queryByEmail(final String email) {
-		return Database.queryUnique(User.class,
-				$user -> email.equals($user.getEmail()));
+		return Database.queryUnique("user","email="+email);
 	}
 
 	/**
@@ -78,32 +69,27 @@ public class Users {
 	public static boolean isIdentityUnique(final User user, final String login,
 			final String email) {
 		return Database.isUnique(
-				user,
-				$user -> (StringUtils.isNotBlank(login) && login.equals($user
-						.getLogin()))
-						|| (StringUtils.isNotBlank(email) && email.equals($user
-								.getEmail())));
+				"user","username="+login+" or email="+email);
 	}
 
 	/**
 	 * Replaces all occurences of old user with new user as editor of content.
 	 */
 	public static void replace(User oldUser, User newUser) {
-		for (Content content : queryContentsEditedByUser(oldUser)) {
-			content.setEditor(newUser);
-			Nodes.save(content);
-		}
+		//for (Content content : queryContentsEditedByUser(oldUser)) {
+		//	content.setEditor(newUser);
+		//	Nodes.save(content);
+		//}
 	}
 
-	private static List<Content> queryContentsEditedByUser(final User user) {
-		return Database.query(Content.class,
-				$content -> $content.getEditor() == user);
+	private static List<Content> queryContentsEditedByUser(String userid) {
+		return Database.query("content","userid="+userid);
 	}
 
 	/**
 	 * Returns true if the given user is stored in database.
 	 */
-	public static boolean isStored(User user) {
-		return user != null ? Database.isStored(user) : false;
+	public static boolean isStored(String userid) {
+		return Database.isStored(userid);
 	}
 }

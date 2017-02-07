@@ -34,6 +34,16 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class User extends Persistent {
 
+	private String userid;
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
 	private String name;
 	private String login;
 	private String password;
@@ -147,4 +157,8 @@ public class User extends Persistent {
 	public String toString() {
 		return "" + login;
 	}
+
+
+
+
 }
