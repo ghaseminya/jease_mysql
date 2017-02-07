@@ -27,8 +27,8 @@ import jease.cmf.web.node.NodeTableModel;
 import jease.cmf.web.node.NodeViews;
 import jease.cmf.web.node.tree.container.ContainerTable;
 import jease.cms.domain.Content;
-import jfix.util.I18N;
-import jfix.zk.Listbox;
+import db.util.I18N;
+import db.zk.Listbox;
 
 import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Listcell;

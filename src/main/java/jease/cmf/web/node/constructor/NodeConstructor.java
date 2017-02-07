@@ -19,8 +19,8 @@ package jease.cmf.web.node.constructor;
 import jease.cmf.domain.Node;
 import jease.cmf.domain.NodeException;
 import jease.cmf.web.JeaseSession;
-import jfix.zk.Refreshable;
-import jfix.zk.Selectfield;
+import db.zk.Refreshable;
+import db.zk.Selectfield;
 
 import org.apache.commons.lang3.ArrayUtils;
 

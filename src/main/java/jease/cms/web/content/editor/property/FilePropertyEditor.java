@@ -19,7 +19,7 @@ package jease.cms.web.content.editor.property;
 import jease.Names;
 import jease.Registry;
 import jease.cms.domain.property.FileProperty;
-import jfix.zk.Mediafield;
+import db.zk.Mediafield;
 
 public class FilePropertyEditor extends Mediafield implements
 		PropertyEditor<FileProperty> {

@@ -19,9 +19,8 @@ package jease.cms.web.system.redirect;
 import java.util.Date;
 
 import jease.cms.domain.Redirect;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectEditor;
+import db.util.I18N;
+import db.zk.ObjectEditor;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zul.Textbox;

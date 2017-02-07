@@ -16,7 +16,7 @@
  */
 package jease.cms.domain;
 
-import jfix.relational.Persistent;
+import db.relational.Persistent;
 
 /**
  * Stores a path of a content object which contains an URL with HTTP status.

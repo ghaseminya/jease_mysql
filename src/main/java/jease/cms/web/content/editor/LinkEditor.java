@@ -18,7 +18,7 @@ package jease.cms.web.content.editor;
 
 import jease.cms.domain.Link;
 import jease.cms.web.component.Linkfield;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.apache.commons.lang3.StringUtils;
 

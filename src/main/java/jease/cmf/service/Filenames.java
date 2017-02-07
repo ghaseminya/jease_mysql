@@ -18,7 +18,7 @@ package jease.cmf.service;
 
 import java.text.Normalizer;
 
-import jfix.util.I18N;
+import db.util.I18N;
 
 /**
  * Service to ease the normalization of filenames.

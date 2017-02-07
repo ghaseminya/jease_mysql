@@ -16,7 +16,7 @@
  */
 package jease.cms.domain;
 
-import jfix.relational.Persistent;
+import db.relational.Persistent;
 
 /**
  * Simple holder for pairs of key and value.

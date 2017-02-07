@@ -18,8 +18,8 @@ package jease.cms.web.content.editor;
 
 import jease.cms.domain.News;
 import jease.cms.web.component.RichTextarea;
-import jfix.util.I18N;
-import jfix.zk.Column;
+import db.util.I18N;
+import db.zk.Column;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zk.ui.event.Events;

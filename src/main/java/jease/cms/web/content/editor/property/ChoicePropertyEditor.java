@@ -23,10 +23,10 @@ import jease.cms.domain.property.ChoiceProperty;
 import jease.cms.domain.property.Property;
 import jease.cms.domain.property.Provider;
 import jease.cms.service.Properties;
-import jfix.zk.Checklist;
-import jfix.zk.Container;
-import jfix.zk.Scrollbox;
-import jfix.zk.Selectfield;
+import db.zk.Checklist;
+import db.zk.Container;
+import db.zk.Scrollbox;
+import db.zk.Selectfield;
 
 public class ChoicePropertyEditor extends Container implements
 		PropertyEditor<ChoiceProperty> {

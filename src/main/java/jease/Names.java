@@ -16,7 +16,7 @@
  */
 package jease;
 
-import jfix.util.Reflections;
+import db.util.Reflections;
 
 public class Names {
 

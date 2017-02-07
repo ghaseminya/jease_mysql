@@ -18,12 +18,11 @@ package jease.cms.web.system.role;
 
 import jease.cms.domain.Role;
 import jease.cms.service.Contents;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.Checklist;
-import jfix.zk.ItemRenderer;
-import jfix.zk.ObjectEditor;
-import jfix.zk.Scrollbox;
+import db.util.I18N;
+import db.zk.Checklist;
+import db.zk.ItemRenderer;
+import db.zk.ObjectEditor;
+import db.zk.Scrollbox;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zul.Checkbox;

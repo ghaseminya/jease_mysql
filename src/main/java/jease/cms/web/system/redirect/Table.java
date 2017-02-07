@@ -17,7 +17,7 @@
 package jease.cms.web.system.redirect;
 
 import jease.cms.domain.Redirect;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectTable;
 
 public class Table extends ObjectTable<Redirect> {
 

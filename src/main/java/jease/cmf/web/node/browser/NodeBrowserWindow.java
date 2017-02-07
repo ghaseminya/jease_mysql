@@ -18,7 +18,7 @@ package jease.cmf.web.node.browser;
 
 import jease.cmf.domain.Node;
 import jease.cmf.web.JeaseSession;
-import jfix.zk.Window;
+import db.zk.Window;
 
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;

@@ -34,10 +34,9 @@ import jease.cms.domain.Folder;
 import jease.cms.domain.Image;
 import jease.cms.domain.Text;
 import jease.cms.domain.User;
-import jfix.util.MimeTypes;
-import jfix.util.Urls;
-import jfix.util.Zipfiles;
-import jfix.util.Zipfiles.EntryHandler;
+import db.util.MimeTypes;
+import db.util.Zipfiles;
+import db.util.Zipfiles.EntryHandler;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;

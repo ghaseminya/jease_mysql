@@ -19,8 +19,8 @@ package jease.cms.web.system.linkcheck;
 import jease.cmf.domain.Node;
 import jease.cmf.web.JeaseSession;
 import jease.cms.domain.Linkcheck;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
+import db.util.I18N;
+import db.zk.ObjectTableModel;
 
 import java.util.HashSet;
 import java.util.List;

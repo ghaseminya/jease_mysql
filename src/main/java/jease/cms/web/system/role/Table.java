@@ -17,7 +17,7 @@
 package jease.cms.web.system.role;
 
 import jease.cms.domain.Role;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectTable;
 
 public class Table extends ObjectTable<Role> {
 

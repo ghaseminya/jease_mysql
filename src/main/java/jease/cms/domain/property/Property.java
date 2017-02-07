@@ -16,7 +16,7 @@
  */
 package jease.cms.domain.property;
 
-import jfix.relational.Persistent;
+import db.relational.Persistent;
 
 import java.util.Random;
 

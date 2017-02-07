@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import jease.Names;
 import jease.Registry;
-import jfix.util.Images;
+import db.util.Images;
 
 import org.apache.commons.lang3.math.NumberUtils;
 

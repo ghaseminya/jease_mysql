@@ -19,10 +19,10 @@ package jease.cms.web.system.parameter;
 import java.util.List;
 
 import jease.cms.domain.Parameter;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
-import jfix.zk.View;
+import db.relational.Database;
+import db.util.I18N;
+import db.zk.ObjectTableModel;
+import db.zk.View;
 
 import org.zkoss.zul.Label;
 

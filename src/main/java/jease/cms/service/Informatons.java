@@ -22,8 +22,8 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
-import jfix.relational.Database;
-import jfix.relational.Persistent;
+import db.relational.Database;
+import db.relational.Persistent;
 
 import org.apache.commons.io.FileUtils;
 

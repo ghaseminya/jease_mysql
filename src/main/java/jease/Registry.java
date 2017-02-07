@@ -23,8 +23,7 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Parameter;
 import jease.cms.domain.property.Property;
 import jease.cms.web.content.editor.property.PropertyEditor;
-import jfix.relational.Database;
-import jfix.util.Reflections;
+import db.util.Reflections;
 
 import java.io.InputStream;
 import java.net.URL;

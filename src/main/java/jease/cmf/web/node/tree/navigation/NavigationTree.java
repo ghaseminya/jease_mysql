@@ -25,8 +25,8 @@ import jease.cmf.domain.Node;
 import jease.cmf.domain.NodeException;
 import jease.cmf.service.Nodes;
 import jease.cmf.web.JeaseSession;
-import jfix.zk.Modal;
-import jfix.zk.Tree;
+import db.zk.Modal;
+import db.zk.Tree;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.DropEvent;

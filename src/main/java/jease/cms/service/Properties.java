@@ -23,8 +23,8 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Factory;
 import jease.cms.domain.property.Property;
 import jease.cms.domain.property.Provider;
-import jfix.relational.Database;
-import jfix.util.Natural;
+import db.relational.Database;
+import db.util.Natural;
 
 import java.util.ArrayList;
 import java.util.HashSet;

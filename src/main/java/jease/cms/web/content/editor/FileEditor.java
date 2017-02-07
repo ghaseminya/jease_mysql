@@ -19,9 +19,9 @@ package jease.cms.web.content.editor;
 import jease.Names;
 import jease.Registry;
 import jease.cms.domain.File;
-import jfix.util.I18N;
-import jfix.zk.Mediafield;
-import jfix.zk.Modal;
+import db.util.I18N;
+import db.zk.Mediafield;
+import db.zk.Modal;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;

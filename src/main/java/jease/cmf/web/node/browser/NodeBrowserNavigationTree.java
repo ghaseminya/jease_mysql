@@ -19,7 +19,7 @@ package jease.cmf.web.node.browser;
 import jease.cmf.web.JeaseSession;
 import jease.cmf.web.node.tree.navigation.NavigationTreeModel;
 import jease.cmf.web.node.tree.navigation.NavigationTreeRenderer;
-import jfix.zk.Tree;
+import db.zk.Tree;
 
 import org.zkoss.zul.ext.TreeOpenableModel;
 

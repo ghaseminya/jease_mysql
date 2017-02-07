@@ -25,8 +25,8 @@ import javax.servlet.annotation.WebListener;
 
 import jease.Names;
 import jease.cms.service.Timers;
-import jfix.relational.Database;
-import jfix.util.I18N;
+import db.relational.Database;
+import db.util.I18N;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -21,10 +21,10 @@ import jease.Registry;
 import jease.cmf.web.JeaseSession;
 import jease.cms.domain.User;
 import jease.cms.web.content.ContentManager;
-import jfix.util.I18N;
-import jfix.zk.Images;
-import jfix.zk.Logout;
-import jfix.zk.Tabbox;
+import db.util.I18N;
+import db.zk.Images;
+import db.zk.Logout;
+import db.zk.Tabbox;
 
 import org.apache.commons.lang3.StringUtils;
 

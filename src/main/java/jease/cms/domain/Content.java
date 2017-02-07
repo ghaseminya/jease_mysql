@@ -23,7 +23,7 @@ import java.util.UUID;
 import jease.cmf.annotation.NotSerialized;
 import jease.cmf.domain.Node;
 import jease.cms.domain.property.Property;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.apache.commons.lang3.ArrayUtils;
 

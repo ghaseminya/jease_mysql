@@ -17,7 +17,7 @@
 package jease.cms.web.system.sequence;
 
 import jease.cms.domain.Sequence;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectTable;
 
 public class Table extends ObjectTable<Sequence> {
 

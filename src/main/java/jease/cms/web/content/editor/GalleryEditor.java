@@ -18,9 +18,9 @@ package jease.cms.web.content.editor;
 
 import jease.cms.domain.Gallery;
 import jease.cms.web.component.RichTextarea;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.Spinner;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.Spinner;
 
 import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Label;

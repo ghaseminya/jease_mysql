@@ -21,8 +21,8 @@ import java.util.List;
 
 import jease.cmf.domain.Node;
 import jease.cmf.web.node.NodeTableModel;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
+import db.util.I18N;
+import db.zk.ObjectTableModel;
 
 public class FlatTableModel extends ObjectTableModel<Node> {
 

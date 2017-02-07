@@ -17,9 +17,9 @@
 package jease.cms.service;
 
 import jease.cms.domain.Content;
-import jfix.relational.Database;
-import jfix.util.Regexps;
-import jfix.util.Urls;
+import db.relational.Database;
+import db.util.Regexps;
+import db.util.Urls;
 
 import java.util.HashMap;
 import java.util.HashSet;

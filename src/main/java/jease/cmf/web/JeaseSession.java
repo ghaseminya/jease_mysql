@@ -20,7 +20,7 @@ import jease.Names;
 import jease.cmf.domain.Node;
 import jease.cmf.web.node.NodeFilter;
 
-public class JeaseSession extends jfix.zk.Sessions {
+public class JeaseSession extends db.zk.Sessions {
 
 	public static void setRoots(Node[] nodes) {
 		set(Names.JEASE_SESSION_ROOTS, nodes);

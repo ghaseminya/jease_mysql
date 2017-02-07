@@ -16,15 +16,13 @@
  */
 package jease.cms.web.system.parameter;
 
-import java.util.function.Predicate;
-
 import jease.Names;
 import jease.cmf.web.JeaseSession;
 import jease.cms.domain.Parameter;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.ObjectEditor;
+import db.relational.Database;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.ObjectEditor;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.codemirror.Codemirror;

@@ -16,8 +16,8 @@
  */
 package jease.cms.web.user;
 
-import jfix.util.I18N;
-import jfix.zk.Modal;
+import db.util.I18N;
+import db.zk.Modal;
 
 public class SessionUserEditor extends Editor {
 

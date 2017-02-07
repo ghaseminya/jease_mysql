@@ -20,7 +20,7 @@ import jease.cms.domain.property.Property;
 import jease.cms.domain.property.Provider;
 import jease.cms.domain.property.SelectionProperty;
 import jease.cms.service.Properties;
-import jfix.zk.Selectfield;
+import db.zk.Selectfield;
 
 public class SelectionPropertyEditor extends Selectfield implements
 		PropertyEditor<SelectionProperty> {

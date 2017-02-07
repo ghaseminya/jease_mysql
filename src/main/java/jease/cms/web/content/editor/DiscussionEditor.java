@@ -17,7 +17,7 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Discussion;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.zkoss.zul.Textbox;
 

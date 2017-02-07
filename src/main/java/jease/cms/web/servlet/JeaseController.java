@@ -41,9 +41,8 @@ import jease.Registry;
 import jease.cmf.domain.Node;
 import jease.cmf.service.Nodes;
 import jease.cms.domain.Redirect;
-import jfix.relational.Database;
-import jfix.servlet.ResponseRewriter;
-import jfix.servlet.Servlets;
+import db.relational.Database;
+import db.servlet.Servlets;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -19,8 +19,7 @@ package jease.cms.domain;
 import java.io.IOException;
 import java.net.URI;
 
-import jfix.util.MimeTypes;
-import jfix.util.Urls;
+import db.util.MimeTypes;
 
 /**
  * A Transit references a file in the file-system of the server via an URI as

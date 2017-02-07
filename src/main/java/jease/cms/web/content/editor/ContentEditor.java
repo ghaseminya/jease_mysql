@@ -31,12 +31,12 @@ import jease.cms.service.Properties;
 import jease.cms.service.Revisions;
 import jease.cms.service.Sequences;
 import jease.cms.web.content.editor.property.PropertyManager;
-import jfix.util.I18N;
-import jfix.zk.Images;
-import jfix.zk.Modal;
-import jfix.zk.Selectfield;
-import jfix.zk.Sessions;
-import jfix.zk.WebBrowser;
+import db.util.I18N;
+import db.zk.Images;
+import db.zk.Modal;
+import db.zk.Selectfield;
+import db.zk.Sessions;
+import db.zk.WebBrowser;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zk.ui.event.Event;

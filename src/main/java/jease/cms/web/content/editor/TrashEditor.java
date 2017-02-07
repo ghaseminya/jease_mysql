@@ -17,7 +17,7 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Trash;
-import jfix.util.I18N;
+import db.util.I18N;
 
 public class TrashEditor extends ContentEditor<Trash> {
 

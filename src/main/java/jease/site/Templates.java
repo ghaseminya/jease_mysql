@@ -22,8 +22,7 @@ import java.util.function.Supplier;
 import jease.Names;
 import jease.Registry;
 import jease.cms.domain.Content;
-import jfix.relational.Database;
-import jfix.util.Reflections;
+import db.util.Reflections;
 
 import org.apache.commons.lang3.StringUtils;
 

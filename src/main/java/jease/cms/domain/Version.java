@@ -16,7 +16,7 @@
  */
 package jease.cms.domain;
 
-import jfix.relational.Persistent;
+import db.relational.Persistent;
 
 import java.util.Date;
 

@@ -24,9 +24,9 @@ import javax.servlet.http.HttpSession;
 import jease.cms.domain.User;
 import jease.cms.service.Users;
 import jease.cms.web.servlet.JeaseSessionListener;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
-import jfix.zk.Sessions;
+import db.util.I18N;
+import db.zk.ObjectTableModel;
+import db.zk.Sessions;
 
 public class TableModel extends ObjectTableModel<User> {
 

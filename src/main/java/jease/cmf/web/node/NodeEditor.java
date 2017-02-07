@@ -21,8 +21,8 @@ import jease.cmf.domain.NodeException;
 import jease.cmf.service.Filenames;
 import jease.cmf.service.Nodes;
 import jease.cmf.web.JeaseSession;
-import jfix.util.I18N;
-import jfix.zk.ObjectEditor;
+import db.util.I18N;
+import db.zk.ObjectEditor;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;

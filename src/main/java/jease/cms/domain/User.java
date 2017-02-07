@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import jfix.relational.Persistent;
-import jfix.util.Crypts;
+import db.relational.Persistent;
+import db.util.Crypts;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;

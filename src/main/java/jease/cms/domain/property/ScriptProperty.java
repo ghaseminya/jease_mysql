@@ -16,7 +16,7 @@
  */
 package jease.cms.domain.property;
 
-import jfix.util.Reflections;
+import db.util.Reflections;
 
 import org.apache.commons.lang3.StringUtils;
 

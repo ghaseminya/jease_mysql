@@ -17,7 +17,7 @@
 package jease.cms.web.content.editor.property;
 
 import jease.cms.domain.property.IntegerProperty;
-import jfix.zk.Spinner;
+import db.zk.Spinner;
 
 public class IntegerPropertyEditor extends Spinner implements
 		PropertyEditor<IntegerProperty> {

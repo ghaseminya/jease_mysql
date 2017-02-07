@@ -17,10 +17,9 @@
 package jease.cms.web.system.sequence;
 
 import jease.cms.domain.Sequence;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectEditor;
-import jfix.zk.Spinner;
+import db.util.I18N;
+import db.zk.ObjectEditor;
+import db.zk.Spinner;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zul.Textbox;

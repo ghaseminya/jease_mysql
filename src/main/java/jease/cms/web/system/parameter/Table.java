@@ -17,7 +17,7 @@
 package jease.cms.web.system.parameter;
 
 import jease.cms.domain.Parameter;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectTable;
 
 public class Table extends ObjectTable<Parameter> {
 

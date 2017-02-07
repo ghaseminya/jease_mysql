@@ -19,8 +19,8 @@ package jease.cmf.web.node;
 import jease.cmf.domain.Node;
 import jease.cmf.web.JeaseSession;
 import jease.cmf.web.node.constructor.NodeConstructor;
-import jfix.zk.ObjectEditor;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectEditor;
+import db.zk.ObjectTable;
 
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;

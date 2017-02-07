@@ -18,9 +18,9 @@ package jease.cms.web.content.editor;
 
 import jease.cms.domain.Text;
 import jease.cms.web.component.RichTextarea;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.ZK;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.ZK;
 
 import org.zkoss.codemirror.Codemirror;
 import org.zkoss.zk.ui.event.Events;

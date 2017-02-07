@@ -25,11 +25,7 @@
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>com.db4o</groupId>
-            <artifactId>db4o</artifactId>
-            <version>8.0.249.16098</version>
-        </dependency>
+
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
@@ -122,11 +118,7 @@
             <artifactId>org.eclipse.mylyn.wikitext.tracwiki.core</artifactId>
             <version>2.6.0.v20150625-2041</version>
         </dependency>
-        <dependency>
-            <groupId>org.garret</groupId>
-            <artifactId>perst</artifactId>
-            <version>4.38</version>
-        </dependency>
+
         <dependency>
             <groupId>org.imgscalr</groupId>
             <artifactId>imgscalr-lib</artifactId>
@@ -147,6 +139,30 @@
             <artifactId>ckez</artifactId>
             <version>4.4.6.2</version>
         </dependency>
+
+
+        <!-- Persian Date -->
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>55.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/ir.ghasemkiani/persiancalendar -->
+        <dependency>
+            <groupId>ir.ghasemkiani</groupId>
+            <artifactId>persiancalendar</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+        <!-- Mysql JDBC-->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.5</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <finalName>ROOT</finalName>

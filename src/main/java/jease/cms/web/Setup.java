@@ -19,9 +19,9 @@ package jease.cms.web;
 import jease.cmf.service.Nodes;
 import jease.cms.domain.Folder;
 import jease.cms.domain.Text;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.ZK;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.ZK;
 
 import java.util.Date;
 

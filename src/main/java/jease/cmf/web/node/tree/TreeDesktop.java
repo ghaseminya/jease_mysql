@@ -22,9 +22,9 @@ import jease.cmf.web.node.NodeDesktop;
 import jease.cmf.web.node.tree.container.ContainerTable;
 import jease.cmf.web.node.tree.navigation.NavigationTree;
 import jease.cmf.web.node.tree.navigation.NavigationTreeModel;
-import jfix.util.I18N;
-import jfix.zk.Images;
-import jfix.zk.Panel;
+import db.util.I18N;
+import db.zk.Images;
+import db.zk.Panel;
 
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;

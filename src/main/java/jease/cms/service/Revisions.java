@@ -25,7 +25,6 @@ import jease.cmf.service.Nodes;
 import jease.cmf.service.Revisioner;
 import jease.cms.domain.Content;
 import jease.cms.domain.Version;
-import jfix.relational.Database;
 
 import org.apache.commons.lang3.math.NumberUtils;
 

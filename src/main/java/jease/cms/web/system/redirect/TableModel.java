@@ -17,9 +17,9 @@
 package jease.cms.web.system.redirect;
 
 import jease.cms.domain.Redirect;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
+import db.relational.Database;
+import db.util.I18N;
+import db.zk.ObjectTableModel;
 
 import java.util.List;
 

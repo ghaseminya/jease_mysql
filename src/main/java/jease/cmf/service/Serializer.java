@@ -18,8 +18,8 @@ package jease.cmf.service;
 
 import jease.cmf.annotation.NotSerialized;
 import jease.cmf.domain.Node;
-import jfix.relational.Persistent;
-import jfix.util.Reflections;
+import db.relational.Persistent;
+import db.util.Reflections;
 
 import java.lang.reflect.Field;
 import java.util.Set;

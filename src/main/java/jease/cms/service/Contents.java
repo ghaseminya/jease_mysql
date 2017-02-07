@@ -20,11 +20,9 @@ import jease.Names;
 import jease.Registry;
 import jease.cmf.service.Nodes;
 import jease.cms.domain.Content;
-import jease.cms.domain.Reference;
 import jease.cms.domain.Trash;
-import jease.cms.domain.User;
-import jfix.relational.Database;
-import jfix.util.Reflections;
+import db.relational.Database;
+import db.util.Reflections;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.time.DateUtils;
 

@@ -17,10 +17,10 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Document;
-import jfix.util.I18N;
-import jfix.zk.Images;
-import jfix.zk.Modal;
-import jfix.zk.Window;
+import db.util.I18N;
+import db.zk.Images;
+import db.zk.Modal;
+import db.zk.Window;
 
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;

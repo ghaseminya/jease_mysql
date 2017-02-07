@@ -21,7 +21,7 @@ import java.util.List;
 
 import jease.cmf.domain.Node;
 import jease.cmf.web.node.NodeTableModel;
-import jfix.zk.ObjectTableModel;
+import db.zk.ObjectTableModel;
 
 public class ContainerTableModel extends ObjectTableModel<Node> {
 

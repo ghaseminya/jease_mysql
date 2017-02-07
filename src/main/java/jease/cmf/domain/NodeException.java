@@ -16,7 +16,7 @@
  */
 package jease.cmf.domain;
 
-import jfix.util.I18N;
+import db.util.I18N;
 
 public class NodeException extends Exception {
 

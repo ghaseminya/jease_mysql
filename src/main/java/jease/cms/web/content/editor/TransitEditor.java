@@ -24,10 +24,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import jease.cms.domain.Transit;
-import jfix.util.I18N;
-import jfix.zk.Combobox;
-import jfix.zk.Mediafield;
-import jfix.zk.ZK;
+import db.util.I18N;
+import db.zk.Combobox;
+import db.zk.Mediafield;
+import db.zk.ZK;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;

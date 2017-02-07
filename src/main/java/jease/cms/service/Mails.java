@@ -32,7 +32,7 @@ import javax.mail.internet.MimeMessage;
 
 import jease.Names;
 import jease.Registry;
-import jfix.relational.Database;
+import db.relational.Database;
 
 /**
  * Service for sending emails.

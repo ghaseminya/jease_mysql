@@ -20,7 +20,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import jfix.relational.Persistent;
+import db.relational.Persistent;
 
 public class Redirect extends Persistent {
 

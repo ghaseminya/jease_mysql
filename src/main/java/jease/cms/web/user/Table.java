@@ -17,7 +17,7 @@
 package jease.cms.web.user;
 
 import jease.cms.domain.User;
-import jfix.zk.ObjectTable;
+import db.zk.ObjectTable;
 
 public class Table extends ObjectTable<User> {
 

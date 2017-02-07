@@ -17,7 +17,7 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Wiki;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.zkoss.codemirror.Codemirror;
 

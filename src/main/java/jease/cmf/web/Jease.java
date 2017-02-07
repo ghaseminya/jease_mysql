@@ -19,10 +19,10 @@ package jease.cmf.web;
 import jease.cmf.web.node.NodeTable;
 import jease.cmf.web.node.flat.FlatDesktop;
 import jease.cmf.web.node.tree.TreeDesktop;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.Radiogroup;
-import jfix.zk.Refreshable;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.Radiogroup;
+import db.zk.Refreshable;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Events;

@@ -17,11 +17,8 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Factory;
-import jease.cms.domain.Sequence;
-import jfix.relational.Database;
-import jfix.util.I18N;
-import jfix.util.Natural;
-import jfix.zk.Combobox;
+import db.util.I18N;
+import db.zk.Combobox;
 
 public class FactoryEditor extends ContentEditor<Factory> {
 

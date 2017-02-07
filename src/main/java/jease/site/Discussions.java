@@ -19,7 +19,7 @@ package jease.site;
 import jease.cmf.service.Nodes;
 import jease.cms.domain.Discussion;
 import jease.cms.service.Mails;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;

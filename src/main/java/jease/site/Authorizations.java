@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 import jease.cms.domain.Access;
 import jease.cms.domain.Content;
 import jease.cms.domain.Reference;
-import jfix.relational.Database;
+import db.relational.Database;
 
 import org.apache.commons.lang3.ArrayUtils;
 

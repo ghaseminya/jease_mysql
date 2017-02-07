@@ -19,10 +19,10 @@ package jease.cms.web.system.information;
 import java.util.Map;
 
 import jease.cms.service.Informatons;
-import jfix.util.I18N;
-import jfix.zk.Div;
-import jfix.zk.Formbox;
-import jfix.zk.Refreshable;
+import db.util.I18N;
+import db.zk.Div;
+import db.zk.Formbox;
+import db.zk.Refreshable;
 
 import org.zkoss.zul.Label;
 

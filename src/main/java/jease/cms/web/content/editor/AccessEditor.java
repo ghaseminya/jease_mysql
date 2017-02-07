@@ -17,7 +17,7 @@
 package jease.cms.web.content.editor;
 
 import jease.cms.domain.Access;
-import jfix.util.I18N;
+import db.util.I18N;
 
 import org.apache.commons.lang3.StringUtils;
 import org.zkoss.zul.Datebox;

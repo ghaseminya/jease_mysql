@@ -25,10 +25,10 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Linkcheck;
 import jease.cms.domain.User;
 import jease.cms.service.Linkchecker;
-import jfix.util.I18N;
-import jfix.zk.Images;
-import jfix.zk.Modal;
-import jfix.zk.ObjectTable;
+import db.util.I18N;
+import db.zk.Images;
+import db.zk.Modal;
+import db.zk.ObjectTable;
 
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;

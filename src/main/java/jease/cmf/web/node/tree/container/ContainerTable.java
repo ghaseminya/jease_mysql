@@ -28,10 +28,9 @@ import jease.cmf.domain.NodeException;
 import jease.cmf.service.Nodes;
 import jease.cmf.web.JeaseSession;
 import jease.cmf.web.node.NodeTable;
-import jease.cmf.web.node.NodeTableModel;
-import jfix.util.I18N;
-import jfix.zk.Modal;
-import jfix.zk.Radiogroup;
+import db.util.I18N;
+import db.zk.Modal;
+import db.zk.Radiogroup;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.DropEvent;

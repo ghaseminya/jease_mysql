@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 
 import jease.cmf.domain.Node;
 import jease.cmf.domain.NodeException;
-import jfix.relational.Database;
+import db.relational.Database;
 
 import org.apache.commons.lang3.ArrayUtils;
 

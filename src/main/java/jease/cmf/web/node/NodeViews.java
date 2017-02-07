@@ -18,9 +18,9 @@ package jease.cmf.web.node;
 
 import jease.cmf.domain.Node;
 import jease.cmf.web.JeaseSession;
-import jfix.util.I18N;
-import jfix.zk.Row;
-import jfix.zk.View;
+import db.util.I18N;
+import db.zk.Row;
+import db.zk.View;
 
 import org.apache.commons.io.FileUtils;
 import org.zkoss.zk.ui.event.Event;

@@ -18,7 +18,7 @@ package jease.cms.service;
 
 import jease.cms.domain.Content;
 import jease.cms.domain.User;
-import jfix.relational.Database;
+import db.relational.Database;
 
 import java.util.List;
 

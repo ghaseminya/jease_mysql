@@ -18,7 +18,7 @@ package jease.cms.domain;
 
 import java.util.Date;
 
-import jfix.util.Crypts;
+import db.util.Crypts;
 
 import org.apache.commons.lang3.StringUtils;
 

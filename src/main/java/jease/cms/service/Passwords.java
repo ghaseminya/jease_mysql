@@ -20,8 +20,8 @@ import java.util.function.Function;
 
 import jease.Names;
 import jease.Registry;
-import jfix.util.Crypts;
-import jfix.util.Reflections;
+import db.util.Crypts;
+import db.util.Reflections;
 
 /**
  * Service to ease the handling of passwords (e.g. validation).
