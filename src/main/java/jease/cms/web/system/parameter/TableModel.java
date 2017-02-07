@@ -19,7 +19,7 @@ package jease.cms.web.system.parameter;
 import java.util.List;
 
 import jease.cms.domain.Parameter;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.ObjectTableModel;
 import jfix.zk.View;
@@ -41,7 +41,7 @@ public class TableModel extends ObjectTableModel<Parameter> {
 	}
 
 	public List<Parameter> getList() {
-		return Database.query(Parameter.class);
+		return Database.query("");
 	}
 
 	public Object getValue(Parameter parameter, int column) {

@@ -16,7 +16,7 @@
  */
 package jease.cms.domain;
 
-import jfix.db4o.Persistent;
+import jfix.relational.Persistent;
 
 /**
  * A named sequence returns increasing integers each time when

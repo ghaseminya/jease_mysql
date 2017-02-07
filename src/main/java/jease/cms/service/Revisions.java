@@ -25,7 +25,7 @@ import jease.cmf.service.Nodes;
 import jease.cmf.service.Revisioner;
 import jease.cms.domain.Content;
 import jease.cms.domain.Version;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
@@ -80,7 +80,7 @@ public class Revisions {
 	 * Add new revision with given info (e.g. username) for given content.
 	 */
 	public static void checkin(String info, Content content) {
-		content.addRevision(new Version(info, revisioner.toBlob(content)));
+		//content.addRevision(new Version(info, revisioner.toBlob(content)));
 		purge(content, getCount(), getDays());
 	}
 
@@ -88,8 +88,7 @@ public class Revisions {
 	 * Returns the given revision (by index) for given content.
 	 */
 	public static <E extends Content> E checkout(E content, int revision) {
-		return (E) revisioner.fromBlob(content.getRevisions()[revision]
-				.getBlob());
+		return null;
 	}
 
 	/**
@@ -105,12 +104,12 @@ public class Revisions {
 		long daysInPast = System.currentTimeMillis()
 				- (days * 24L * 3600L * 1000L);
 		List<Version> revisions = new ArrayList<Version>();
-		for (Version version : content.getRevisions()) {
+		/*for (Version version : content.getRevisions()) {
 			if ((count > 0 && revisions.size() < count)
 					|| (days > 0 && version.getBlob().getFile().lastModified() > daysInPast)) {
 				revisions.add(version);
 			}
-		}
+		}*/
 		content.setRevisions(revisions.toArray(new Version[] {}));
 		return revisionsBefore - content.getRevisions().length;
 	}
@@ -126,7 +125,7 @@ public class Revisions {
 			result += Revisions.purge(content, count, days);
 			Nodes.save(content);
 		}
-		Database.ext().gc();
+		//Database.ext().gc();
 		return result;
 	}
 
@@ -135,11 +134,11 @@ public class Revisions {
 	 */
 	public static int getNumber(Class<? extends Content> clazz) {
 		int number = 0;
-		for (Content content : Database.query(clazz)) {
+		/*for (Content content : Database.query(clazz)) {
 			if (content.getRevisions() != null) {
 				number += content.getRevisions().length;
 			}
-		}
+		}*/
 		return number;
 	}
 }

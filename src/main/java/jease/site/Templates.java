@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 import jease.Names;
 import jease.Registry;
 import jease.cms.domain.Content;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Reflections;
 
 import org.apache.commons.lang3.StringUtils;
@@ -44,7 +44,7 @@ public class Templates implements Function<Content, String> {
 	 * Returns template path for given content.
 	 */
 	public static String get(Content content) {
-		return Database.query(supplier).apply(content);
+		return "";//Database.query("","");
 	}
 
 	/**

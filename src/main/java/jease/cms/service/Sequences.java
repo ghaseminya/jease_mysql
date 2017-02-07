@@ -17,7 +17,6 @@
 package jease.cms.service;
 
 import jease.cms.domain.Sequence;
-import jfix.db4o.Database;
 
 /**
  * Service to ease the handling of (named) sequences.
@@ -33,7 +32,7 @@ public class Sequences {
 			sequence = new Sequence(name);
 		}
 		int next = sequence.getNext();
-		Database.save(sequence);
+		//Database.save(sequence);
 		return next;
 	}
 
@@ -51,11 +50,11 @@ public class Sequences {
 
 	private static Sequence query(String name) {
 		if (name != null) {
-			for (Sequence sequence : Database.query(Sequence.class)) {
+			/*for (Sequence sequence : Database.query(Sequence.class)) {
 				if (name.equals(sequence.getName())) {
 					return sequence;
 				}
-			}
+			}*/
 		}
 		return null;
 	}

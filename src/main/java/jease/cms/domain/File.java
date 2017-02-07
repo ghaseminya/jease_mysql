@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
-import jfix.db4o.Blob;
 
 /**
  * A File stores all kinds of binary content as blob in the file-system.
@@ -30,7 +29,7 @@ import jfix.db4o.Blob;
 public class File extends Content {
 
 	private String contentType;
-	private Blob blob = new Blob();
+
 
 	public File() {
 	}
@@ -53,8 +52,8 @@ public class File extends Content {
 	}
 
 	public java.io.File getFile() {
-		return blob.getFile();
-	}
+		return null;
+	}//must be change
 
 	public boolean isPage() {
 		return false;

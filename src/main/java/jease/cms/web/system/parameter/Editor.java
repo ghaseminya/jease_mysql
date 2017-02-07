@@ -21,7 +21,7 @@ import java.util.function.Predicate;
 import jease.Names;
 import jease.cmf.web.JeaseSession;
 import jease.cms.domain.Parameter;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.Div;
 import jfix.zk.ObjectEditor;
@@ -72,20 +72,20 @@ public class Editor extends ObjectEditor<Parameter> {
 		} else {
 			getObject().setValue(multiValue.getValue());
 		}
-		Database.save(getObject());
+		Database.save("getObject");
 	}
 
 	public void delete() {
-		Database.delete(getObject());
+		Database.delete("etObject()");
 	}
 
 	public void validate() {
 		validate(StringUtils.isEmpty(key.getValue()),
 				I18N.get("Key_is_required"));
-		validate(!Database.isUnique(getObject(), new Predicate<Parameter>() {
+		/*validate(!Database.isUnique(getObject(), new Predicate<Parameter>() {
 			public boolean test(Parameter parameter) {
 				return parameter.getKey().equals(key.getText());
 			}
-		}), I18N.get("Key_must_be_unique"));
+		}), I18N.get("Key_must_be_unique"));*/
 	}
 }

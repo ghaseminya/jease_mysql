@@ -23,7 +23,7 @@ import jease.cmf.service.Nodes;
 import jease.cms.domain.Content;
 import jease.cms.domain.Content.PathChangeProcessor;
 import jease.cms.domain.Trash;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -43,7 +43,7 @@ public class Relocator implements PathChangeProcessor {
 				public void run() {
 					for (Content content : searchContent(target)) {
 						content.replace(target, replacement);
-						Database.save(content);
+						//Database.save(content);
 					}
 				}
 			});
@@ -51,10 +51,6 @@ public class Relocator implements PathChangeProcessor {
 	}
 
 	private List<Content> searchContent(final String target) {
-		return Database.query(Content.class, new Predicate<Content>() {
-			public boolean test(Content obj) {
-				return obj.getFulltext().indexOf(target) != -1;
-			}
-		});
+		return null;
 	}
 }

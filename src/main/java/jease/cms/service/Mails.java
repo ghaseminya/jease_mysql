@@ -32,7 +32,7 @@ import javax.mail.internet.MimeMessage;
 
 import jease.Names;
 import jease.Registry;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
 /**
  * Service for sending emails.
@@ -79,7 +79,7 @@ public class Mails {
 	 */
 	public static void send(String sender, String recipients, String subject,
 			String text) throws MessagingException {
-		final Properties properties = Database.query(propertySupplier);
+		final Properties properties = Database.query("propertySupplier");
 		if (properties != null) {
 			Session session = Session.getInstance(properties,
 					new javax.mail.Authenticator() {

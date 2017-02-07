@@ -19,7 +19,7 @@ package jease.cms.web.system.redirect;
 import java.util.Date;
 
 import jease.cms.domain.Redirect;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.ObjectEditor;
 
@@ -48,11 +48,11 @@ public class Editor extends ObjectEditor<Redirect> {
 		getObject().setSource(source.getText());
 		getObject().setTarget(target.getText());
 		getObject().setTimestamp(new Date());
-		Database.save(getObject());
+		//Database.save(getObject());
 	}
 
 	public void delete() {
-		Database.delete(getObject());
+		//Database.delete(getObject());
 	}
 
 	public void validate() {

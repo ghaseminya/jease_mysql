@@ -23,7 +23,7 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Parameter;
 import jease.cms.domain.property.Property;
 import jease.cms.web.content.editor.property.PropertyEditor;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Reflections;
 
 import java.io.InputStream;
@@ -48,9 +48,9 @@ public class Registry {
 	private static class ParameterMap implements Supplier<Map<String, Parameter>> {
 		public Map<String, Parameter> get() {
 			Map<String, Parameter> map = new HashMap<>();
-			for (Parameter parameter : Database.query(Parameter.class)) {
+			/*for (Parameter parameter : Database.query(Parameter.class)) {
 				map.put(parameter.getKey(), parameter);
-			}
+			}*/
 			return map;
 		}
 	}
@@ -169,8 +169,8 @@ public class Registry {
 	 * Returns value of parameter for given key or null if key doesn't exist.
 	 */
 	public static String getParameter(String key) {
-		Parameter parameter = Database.query(parameters).get(key);
-		return parameter != null ? parameter.getValue() : null;
+		//Parameter parameter = Database.query(parameters).get(key);
+		return "";//parameter != null ? parameter.getValue() : null;
 	}
 
 	/**

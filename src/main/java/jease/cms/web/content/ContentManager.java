@@ -71,25 +71,25 @@ public class ContentManager extends Jease {
 
 	private void initDumpButton() {
 		dump = new Button(I18N.get("Dump"), Images.DriveCdrom);
-		dump.addEventListener(Events.ON_CLICK, event -> Filedownload
+		/*dump.addEventListener(Events.ON_CLICK, event -> Filedownload
 				.save(Backups.dump(JeaseSession.getContainer()))
 
-		);
+		);*/
 	}
 
 	private void initRestoreButton() {
 		restore = new Fileupload(I18N.get("Restore"), Images.MediaCdrom);
-		restore.addEventListener(
+		/*restore.addEventListener(
 				Events.ON_UPLOAD,
 				event -> {
 					Media media = ((UploadEvent) event).getMedia();
 					if (media != null) {
 						try {
-							File backupFile = Medias.asFile(media);
-							backupFile.deleteOnExit();
-							Backups.restore(backupFile,
-									JeaseSession.getContainer(),
-									JeaseSession.get(User.class));
+							//File backupFile = Medias.asFile(media);
+							//backupFile.deleteOnExit();
+							//Backups.restore(backupFile,
+							//		JeaseSession.getContainer(),
+							//		JeaseSession.get(User.class));
 						} catch (Exception e) {
 							Modal.error(e.getMessage());
 						} finally {
@@ -97,6 +97,7 @@ public class ContentManager extends Jease {
 						}
 					}
 				});
+				*/
 	}
 
 	private void initUploadButton() {

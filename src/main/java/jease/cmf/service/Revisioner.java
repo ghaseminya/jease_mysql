@@ -16,14 +16,9 @@
  */
 package jease.cmf.service;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.io.Writer;
-import java.lang.reflect.Field;
-import java.nio.file.Files;
-
 import jease.cmf.domain.Node;
-import jfix.db4o.Blob;
+
+import java.lang.reflect.Field;
 
 public class Revisioner extends Serializer {
 
@@ -34,14 +29,7 @@ public class Revisioner extends Serializer {
 	public Revisioner(Node... nodes) {
 		for (Node node : nodes) {
 			for (Field field : getFields(node)) {
-				if (isNotSerialized(field)
-						|| (isNodeDeclaringClass(field) && isNode(field))) {
-					omitField(field);
-					continue;
-				}
-				if (!isNodeDeclaringClass(field) && isNode(field)) {
-					registerConverter(field);
-				}
+
 			}
 		}
 	}
@@ -49,35 +37,5 @@ public class Revisioner extends Serializer {
 	/**
 	 * Serialize given Node into XML and return result as Blob.
 	 */
-	public Blob toBlob(Node node) {
-		if (node == null) {
-			return null;
-		}
-		try {
-			Blob blob = new Blob();
-			Writer writer = Files.newBufferedWriter(blob.getFile().toPath());
-			toXML(node, writer);
-			writer.close();
-			return blob;
-		} catch (IOException e) {
-			throw new RuntimeException(e.getMessage(), e);
-		}
-	}
 
-	/**
-	 * Deserializes given XML contained in Blob into Node.
-	 */
-	public Node fromBlob(Blob blob) {
-		if (blob == null) {
-			return null;
-		}
-		try {
-			Reader reader = Files.newBufferedReader(blob.getFile().toPath());
-			Node node = fromXML(reader);
-			reader.close();
-			return node;
-		} catch (IOException e) {
-			throw new RuntimeException(e.getMessage(), e);
-		}
-	}
 }

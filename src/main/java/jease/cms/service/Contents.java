@@ -23,7 +23,7 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Reference;
 import jease.cms.domain.Trash;
 import jease.cms.domain.User;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Reflections;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -44,7 +44,7 @@ public class Contents {
         if (uuid == null) {
             return null;
         }
-        return Database.queryUnique(Content.class, content -> uuid.equals(content.getUUID()));
+        return Database.queryUnique("","");
     }
 
     /**
@@ -78,7 +78,7 @@ public class Contents {
      * Checks if content is a descendant of a user's root.
      */
     public static boolean isDeletable(Content content) {
-        for (User user : Database.query(User.class)) {
+        /*for (User user : Database.query("","")) {
             if (user.getRoots() != null) {
                 for (Content folder : user.getRoots()) {
                     if (folder.isDescendant(content)) {
@@ -86,7 +86,7 @@ public class Contents {
                     }
                 }
             }
-        }
+        }*/
         return true;
     }
 
@@ -130,12 +130,12 @@ public class Contents {
     }
 
     private static void deleteReferences(Content content) {
-        for (Reference reference : Database.query(Reference.class)) {
+        /*for (Reference reference : Database.query(Reference.class)) {
             if (reference.getContent() != null && reference.getContent().isDescendant(content)) {
                 deleteReferences(reference);
                 Nodes.delete(reference);
             }
-        }
+        }*/
     }
 
     /**
@@ -144,7 +144,7 @@ public class Contents {
      */
     public static void emptyTrash(int daysToKeep) {
         Date pivotDate = DateUtils.addDays(new Date(), -daysToKeep);
-        for (Trash trash : Database.query(Trash.class)) {
+        /*for (Trash trash : Database.query(Trash.class)) {
             if (ArrayUtils.isNotEmpty(trash.getChildren())) {
                 for (Content content : trash.getChildren(Content.class)) {
                     if (content.getLastModified().before(pivotDate)) {
@@ -154,7 +154,7 @@ public class Contents {
                     }
                 }
             }
-        }
+        }*/
     }
 
     /**
@@ -174,7 +174,7 @@ public class Contents {
      * Returns all available content containers.
      */
     public static Content[] getContainer() {
-        List<Content> query = Database.query(Content.class, Content::isContainer);
-        return query.toArray(new Content[query.size()]);
+        //List<Content> query = Database.query(Content.class, Content::isContainer);
+        return null;//query.toArray(new Content[query.size()]);
     }
 }

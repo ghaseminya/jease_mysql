@@ -12,6 +12,9 @@ public class RelationalDatabase {
     public <E> List<E> query(String TableN, String Query) {
      return null;
     }
+    public <E> E query(Object TableN){
+        return null;
+    }
     public <E> E queryUnique(String TableN, String Query) {
         return null;
     }
@@ -34,5 +37,11 @@ public class RelationalDatabase {
     }
     public boolean isStored(String userid) {
         return false;
+    }
+    public void persist(String Query) {
+
+    }
+    public String getBlobDirectory() {
+        return null;
     }
 }

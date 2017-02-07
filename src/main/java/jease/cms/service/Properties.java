@@ -16,13 +16,6 @@
  */
 package jease.cms.service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-
 import jease.Registry;
 import jease.cmf.domain.Node;
 import jease.cmf.service.Nodes;
@@ -30,8 +23,15 @@ import jease.cms.domain.Content;
 import jease.cms.domain.Factory;
 import jease.cms.domain.property.Property;
 import jease.cms.domain.property.Provider;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Natural;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 /**
  * Service for handling properties.
@@ -40,9 +40,9 @@ public class Properties {
 
 	private static Supplier<String[]> propertyNames = () -> {
 		Set<String> result = new HashSet<>();
-		for (Property property : Database.query(Property.class)) {
-			result.add(property.getName());
-		}
+		//for (Property property : Database.query("Property.class")) {
+		//	result.add(property.getName());
+		//}
 		return Natural.sort(result.toArray(new String[] {}));
 	};
 
@@ -74,7 +74,7 @@ public class Properties {
 	 * Returns all existing property names stored within database.
 	 */
 	public static String[] getPropertyNames() {
-		return Database.query(propertyNames);
+		return Database.query("propertyNames");
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class Properties {
 	 * selectable properties.
 	 */
 	public static String[] getProviderPaths() {
-		return Database.query(providerPaths);
+		return Database.query("providerPaths");
 	}
 
 	/**

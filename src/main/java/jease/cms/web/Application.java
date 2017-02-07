@@ -29,7 +29,7 @@ import jease.cms.domain.User;
 import jease.cms.service.Authenticator;
 import jease.cms.service.Users;
 import jease.cms.web.content.Configuration;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Reflections;
 import jfix.zk.LoginWindow;
 import jfix.zk.Modal;
@@ -120,7 +120,7 @@ public class Application extends LoginWindow {
 
 	private void storeLastSession(User user) {
 		user.setLastSession(new Date());
-		Database.ext().persist(user);
+		Database.ext().persist("user");
 	}
 
 	private void initBrowserInfo() {

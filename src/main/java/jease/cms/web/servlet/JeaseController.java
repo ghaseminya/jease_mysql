@@ -41,7 +41,7 @@ import jease.Registry;
 import jease.cmf.domain.Node;
 import jease.cmf.service.Nodes;
 import jease.cms.domain.Redirect;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.servlet.ResponseRewriter;
 import jfix.servlet.Servlets;
 
@@ -51,7 +51,7 @@ import org.apache.commons.lang3.StringUtils;
 public class JeaseController implements javax.servlet.Filter {
 
 	private static Supplier<List<Redirect>> redirectSupplier = () -> {
-		List<Redirect> redirects = Database.query(Redirect.class);
+		List<Redirect> redirects = Database.query("");
 		redirects.sort(Comparator.comparing(Redirect::getTimestamp));
 		return redirects;
 	};
@@ -180,13 +180,13 @@ public class JeaseController implements javax.servlet.Filter {
 			// Set node into request scope and forward to dispatcher
 			request.setAttribute(Node.class.getSimpleName(), node);
 			request.setAttribute(Names.JEASE_SITE_DISPATCHER, dispatcher);
-			Function<String, String> rewriter = StringUtils.isNotBlank(Registry
+			/*Function<String, String> rewriter = StringUtils.isNotBlank(Registry
 					.getParameter(Names.JEASE_SITE_REWRITER)) ? Database
 					.query(rewriterSupplier) : null;
 			request.getRequestDispatcher(dispatcher).forward(
 					request,
 					rewriter != null ? new ResponseRewriter(response, rewriter)
-							: response);
+							: response);*/
 		}
 	}
 
@@ -200,13 +200,13 @@ public class JeaseController implements javax.servlet.Filter {
 	}
 
 	private String rewriteURI(String uri) {
-		for (Redirect redirect : Database.query(redirectSupplier)) {
+		/*for (Redirect redirect : Database.query(redirectSupplier)) {
 			String output = redirect.transform(uri);
 			if (!output.equals(uri)) {
 				return output;
 			}
-		}
-		return uri;
+		}*/
+		return "";
 	}
 
 }

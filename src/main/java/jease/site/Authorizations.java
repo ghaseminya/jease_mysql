@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 import jease.cms.domain.Access;
 import jease.cms.domain.Content;
 import jease.cms.domain.Reference;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -42,7 +42,7 @@ public class Authorizations {
 		if (content == null) {
 			return null;
 		}
-		Map<Content, Access[]> cache = Database.query(accessByContent);
+		Map<Content, Access[]> cache = Database.query("");
 		if (!cache.containsKey(content)) {
 			List<Access> allGuards = new ArrayList<>();
 			Access[] accessGuards = content.getGuards(Access.class);

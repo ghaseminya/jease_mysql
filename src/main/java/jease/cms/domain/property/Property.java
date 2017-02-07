@@ -16,9 +16,9 @@
  */
 package jease.cms.domain.property;
 
-import java.util.Random;
+import jfix.relational.Persistent;
 
-import jfix.db4o.Persistent;
+import java.util.Random;
 
 /**
  * Type safe base class for persistent value objects with a name which needs to

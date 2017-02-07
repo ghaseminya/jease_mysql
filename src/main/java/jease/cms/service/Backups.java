@@ -16,42 +16,10 @@
  */
 package jease.cms.service;
 
-import java.io.File;
-
-import jease.cmf.domain.Node;
-import jease.cmf.domain.NodeException;
-import jease.cmf.service.Backup;
-import jease.cmf.service.Nodes;
-import jease.cms.domain.Content;
-import jease.cms.domain.User;
-
 /**
  * Service to dump/restore contents into/from XML-files.
  */
 public class Backups {
 
-	private final static Backup backup = new Backup(
-			Contents.getAvailableTypes());
 
-	/**
-	 * Dump given node into XML-File.
-	 */
-	public static File dump(Node node) {
-		return backup.dump(node);
-	}
-
-	/**
-	 * Append content contained in previously backuped XML-file to given
-	 * container and assign ownership to given user.
-	 */
-	public static void restore(File backupFile, Node container, final User user)
-			throws NodeException {
-		Node node = backup.restore(backupFile);
-		node.traverse($node -> {
-			Content content = (Content) $node;
-			content.setEditor(user);
-			content.markChanged();
-		});
-		Nodes.append(container, node);
-	}
 }

@@ -18,7 +18,7 @@ package jease.cms.web.system.role;
 
 import jease.cms.domain.Role;
 import jease.cms.service.Contents;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.Checklist;
 import jfix.zk.ItemRenderer;
@@ -61,11 +61,11 @@ public class Editor extends ObjectEditor<Role> {
 		getObject().setName(name.getText());
 		getObject().setAdministrator(administrator.isChecked());
 		getObject().setTypes((String[]) types.getSelected());
-		Database.save(getObject());
+		//Database.save(getObject());
 	}
 
 	public void delete() {
-		Database.delete(getObject());
+		//Database.delete(getObject());
 	}
 
 	public void validate() {

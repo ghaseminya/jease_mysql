@@ -26,7 +26,7 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-import jfix.db4o.Persistent;
+import jfix.relational.Persistent;
 import jfix.util.Urls;
 
 import org.apache.commons.lang3.ArrayUtils;

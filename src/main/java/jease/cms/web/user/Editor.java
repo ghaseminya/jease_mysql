@@ -23,7 +23,7 @@ import jease.cms.domain.User;
 import jease.cms.service.Contents;
 import jease.cms.service.Passwords;
 import jease.cms.service.Users;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.Crypts;
 import jfix.util.I18N;
 import jfix.util.Natural;
@@ -83,7 +83,7 @@ public class Editor extends ObjectEditor<User> {
 		passwordRepeat.setText(getObject().getPassword());
 		email.setText(getObject().getEmail());
 		if (isAdministrationMode()) {
-			role.setSelection(Natural.sort(Database.query(Role.class)), getObject().getRole());
+			//role.setSelection(Natural.sort(Database.query(Role.class)), getObject().getRole());
 			roots.setSelection(Contents.getContainer(), getObject().getRoots());
 			disabled.setChecked(getObject().isDisabled());
 			disabled.setDisabled(getSessionUser() == getObject());
@@ -101,12 +101,12 @@ public class Editor extends ObjectEditor<User> {
 			getObject().setRoots(Arrays.asList(roots.getSelected()).toArray(new Content[roots.getSelected().length]));
 			getObject().setDisabled(disabled.isChecked());
 		}
-		Database.save(getObject());
+		//Database.save(getObject());
 	}
 
 	public void delete() {
 		Users.replace(getObject(), getSessionUser());
-		Database.delete(getObject());
+		//Database.delete(getObject());
 	}
 
 	public void validate() {

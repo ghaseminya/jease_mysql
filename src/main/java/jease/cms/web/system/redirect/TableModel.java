@@ -16,12 +16,12 @@
  */
 package jease.cms.web.system.redirect;
 
-import java.util.List;
-
 import jease.cms.domain.Redirect;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.ObjectTableModel;
+
+import java.util.List;
 
 public class TableModel extends ObjectTableModel<Redirect> {
 
@@ -39,7 +39,7 @@ public class TableModel extends ObjectTableModel<Redirect> {
 	}
 
 	public List<Redirect> getList() {
-		return Database.query(Redirect.class);
+		return Database.query("");
 	}
 
 	public Object getValue(Redirect redirect, int column) {

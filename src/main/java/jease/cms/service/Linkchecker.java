@@ -16,18 +16,17 @@
  */
 package jease.cms.service;
 
+import jease.cms.domain.Content;
+import jfix.relational.Database;
+import jfix.util.Regexps;
+import jfix.util.Urls;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import jease.cms.domain.Content;
-import jease.cms.domain.Linkcheck;
-import jfix.db4o.Database;
-import jfix.util.Regexps;
-import jfix.util.Urls;
 
 public class Linkchecker implements Runnable {
 
@@ -62,9 +61,9 @@ public class Linkchecker implements Runnable {
 	public static void clear() {
 		Database.write(new Runnable() {
 			public void run() {
-				for (Linkcheck linkcheck : Database.query(Linkcheck.class)) {
-					Database.delete(linkcheck);
-				}
+				//for (Linkcheck linkcheck : Database.query("Linkcheck.class")) {
+				//	Database.delete(linkcheck);
+				//}
 			}
 		});
 	}
@@ -73,11 +72,11 @@ public class Linkchecker implements Runnable {
 	 * Deletes all linkcheck objects from database with given path.
 	 */
 	public static void clear(String path) {
-		for (Linkcheck linkcheck : Database.query(Linkcheck.class)) {
-			if (path.equals(linkcheck.getPath())) {
-				Database.delete(linkcheck);
-			}
-		}
+		//for (Linkcheck linkcheck : Database.query(Linkcheck.class)) {
+		//	if (path.equals(linkcheck.getPath())) {
+		//		Database.delete(linkcheck);
+		//	}
+		//}
 	}
 
 	/**
@@ -85,19 +84,19 @@ public class Linkchecker implements Runnable {
 	 */
 	public static void check() {
 		Map<String, Integer> linkStates = new HashMap<>();
-		for (Content content : Database.query(Content.class)) {
-			String fulltext = content.getFulltext().toString();
-			for (String url : extractUrls(fulltext)) {
-				int status;
-				if (linkStates.containsKey(url)) {
-					status = linkStates.get(url);
-				} else {
-					status = getStatus(content, url);
-					linkStates.put(url, status);
-				}
-				Database.save(new Linkcheck(content.getPath(), url, status));
-			}
-		}
+		//for (Content content : Database.query("Content.class")) {
+		//	String fulltext = content.getFulltext().toString();
+		//	for (String url : extractUrls(fulltext)) {
+		//		int status;
+		//		if (linkStates.containsKey(url)) {
+		//			status = linkStates.get(url);
+		//		} else {
+		//			status = getStatus(content, url);
+		//			linkStates.put(url, status);
+		//		}
+		//		Database.save(new Linkcheck(content.getPath(), url, status));
+		//	}
+		//}
 	}
 
 	/**
@@ -107,8 +106,7 @@ public class Linkchecker implements Runnable {
 	public static void check(Content content) {
 		String fulltext = content.getFulltext().toString();
 		for (String url : extractUrls(fulltext)) {
-			Database.save(new Linkcheck(content.getPath(), url, getStatus(
-					content, url)));
+			Database.save("new Linkcheck(content.getPath(), url, getStatus(content, url))");
 		}
 	}
 

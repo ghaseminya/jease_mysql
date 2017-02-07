@@ -17,7 +17,7 @@
 package jease.cms.web.system.sequence;
 
 import jease.cms.domain.Sequence;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.zk.ObjectEditor;
 import jfix.zk.Spinner;
@@ -46,11 +46,11 @@ public class Editor extends ObjectEditor<Sequence> {
 	public void save() {
 		getObject().setName(name.getText());
 		getObject().setValue(value.intValue());
-		Database.save(getObject());
+		//Database.save(getObject());
 	}
 
 	public void delete() {
-		Database.delete(getObject());
+		//Database.delete(getObject());
 	}
 
 	public void validate() {

@@ -18,7 +18,7 @@ package jease.cms.web.content.editor;
 
 import jease.cms.domain.Factory;
 import jease.cms.domain.Sequence;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 import jfix.util.I18N;
 import jfix.util.Natural;
 import jfix.zk.Combobox;
@@ -32,8 +32,7 @@ public class FactoryEditor extends ContentEditor<Factory> {
 	}
 
 	public void load() {
-		sequence.setSelection(Natural.sort(Database.query(Sequence.class)),
-				getNode().getSequence());
+		//
 	}
 
 	public void save() {

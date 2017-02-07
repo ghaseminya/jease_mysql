@@ -94,7 +94,7 @@ public class Database {
 	/**
 	 * Saves or upates given object in database.
 	 */
-	public static void save(Persistent persistent) {
+	public static void save(String Query) {
 
 	}
 
@@ -102,7 +102,7 @@ public class Database {
 	 * Deletes given object from database. If references to given object still
 	 * exists in database, a RuntimeException is thrown.
 	 */
-	public static void delete(Persistent persistent) {
+	public static void delete(String Query) {
 
 	}
 
@@ -111,9 +111,9 @@ public class Database {
 	 * will be cached as long as no write-operation is performed against the
 	 * database.
 	 */
-//	public static <E> E query(String TableN) {
-//		return rdb.query(TableN);
-//	}
+	public static <E> E query(String TableN) {
+		return rdb.query(new Object());
+	}
 
 	/**
 	 * Queries all object from database which are instances of given class and

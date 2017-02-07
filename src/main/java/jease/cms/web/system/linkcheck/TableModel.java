@@ -16,18 +16,15 @@
  */
 package jease.cms.web.system.linkcheck;
 
+import jease.cmf.domain.Node;
+import jease.cmf.web.JeaseSession;
+import jease.cms.domain.Linkcheck;
+import jfix.util.I18N;
+import jfix.zk.ObjectTableModel;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Predicate;
-
-import jease.cmf.domain.Node;
-import jease.cmf.service.Nodes;
-import jease.cmf.web.JeaseSession;
-import jease.cms.domain.Linkcheck;
-import jfix.db4o.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
 
 public class TableModel extends ObjectTableModel<Linkcheck> {
 
@@ -49,19 +46,7 @@ public class TableModel extends ObjectTableModel<Linkcheck> {
 		for (Node root : JeaseSession.getRoots()) {
 			rootPaths.add(root.getPath());
 		}
-		return Database.query(Linkcheck.class, new Predicate<Linkcheck>() {
-			public boolean test(Linkcheck linkcheck) {
-				if (Nodes.getByPath(linkcheck.getPath()) == null) {
-					return false;
-				}
-				for (String rootPath : rootPaths) {
-					if (linkcheck.getPath().startsWith(rootPath)) {
-						return true;
-					}
-				}
-				return false;
-			}
-		});
+		return null;
 	}
 
 	public Object getValue(Linkcheck linkcheck, int column) {

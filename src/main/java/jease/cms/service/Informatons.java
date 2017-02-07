@@ -22,8 +22,8 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
-import jfix.db4o.Database;
-import jfix.db4o.Persistent;
+import jfix.relational.Database;
+import jfix.relational.Persistent;
 
 import org.apache.commons.io.FileUtils;
 
@@ -39,19 +39,19 @@ public class Informatons {
 	}
 
 	public static Collection<Persistent> getDatabaseObjectCount() {
-		return Database.query(Persistent.class);
+		return Database.query("Persistent.class","");
 	}
 
 	public static Map<Class<?>, Integer> getDatabaseClassCount() {
 		Map<Class<?>, Integer> resultMap = new TreeMap<>(
 				Comparator.comparing(Class::getName));
-		for (Persistent obj : Database.query(Persistent.class)) {
-			Class<?> clazz = obj.getClass();
-			if (!resultMap.containsKey(clazz)) {
-				resultMap.put(clazz, 0);
-			}
-			resultMap.put(clazz, resultMap.get(clazz) + 1);
-		}
+		//for (Object obj : Database.query("Persistent.class")) {
+		//	Class<?> clazz = obj.getClass();
+		//	if (!resultMap.containsKey(clazz)) {
+		//		resultMap.put(clazz, 0);
+		//	}
+		//	resultMap.put(clazz, resultMap.get(clazz) + 1);
+		//}
 		return resultMap;
 	}
 

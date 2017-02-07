@@ -17,7 +17,7 @@
 package jease.cms.domain;
 
 import jease.cmf.domain.Node;
-import jfix.db4o.Persistent;
+import jfix.relational.Persistent;
 import jfix.util.Reflections;
 
 import org.apache.commons.lang3.ArrayUtils;

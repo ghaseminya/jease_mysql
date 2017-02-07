@@ -16,14 +16,14 @@
  */
 package jease.cms.web.system.role;
 
+import jease.cms.domain.Role;
+import jfix.relational.Database;
+import jfix.util.I18N;
+import jfix.zk.ObjectTableModel;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import jease.cms.domain.Role;
-import jfix.db4o.Database;
-import jfix.util.I18N;
-import jfix.zk.ObjectTableModel;
 
 public class TableModel extends ObjectTableModel<Role> {
 
@@ -40,7 +40,7 @@ public class TableModel extends ObjectTableModel<Role> {
 	}
 
 	public List<Role> getList() {
-		return Database.query(Role.class);
+		return Database.query("");
 	}
 
 	public Object getValue(Role role, int column) {

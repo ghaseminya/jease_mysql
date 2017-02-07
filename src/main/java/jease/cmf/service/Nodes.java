@@ -23,7 +23,7 @@ import java.util.function.Supplier;
 
 import jease.cmf.domain.Node;
 import jease.cmf.domain.NodeException;
-import jfix.db4o.Database;
+import jfix.relational.Database;
 
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -45,8 +45,7 @@ public class Nodes {
 	 * Returns the root node derived by a database-query.
 	 */
 	public static Node queryRoot() {
-		return Database.queryUnique(Node.class,
-				$node -> $node.getParent() == null);
+		return Database.queryUnique("","");
 	}
 
 	/**
@@ -69,7 +68,7 @@ public class Nodes {
 	 * Returns the system time (milliseconds) of the last change in database.
 	 */
 	public static long queryLastChange() {
-		return Database.ext().getTimestamp();
+		return 10000;
 	}
 
 	/**
@@ -86,7 +85,7 @@ public class Nodes {
 		if (root == null) {
 			return null;
 		}
-		Map<String, Node> cache = Database.query(nodesByPath);
+		Map<String, Node> cache = Database.query("");
 		if (!cache.containsKey(path)) {
 			Node node = root.getChild(path);
 			if (node != null) {
@@ -168,9 +167,9 @@ public class Nodes {
 		public static class Traverse implements Consumer<Node> {
 			public void accept(Node node) {
 				if (isRooted(node)) {
-					Database.save(node);
+					Database.save("");
 				} else {
-					Database.ext().deleteDeliberately(node);
+					//Database.ext().deleteDeliberately(node);
 				}
 			}
 		}

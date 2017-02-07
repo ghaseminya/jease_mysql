@@ -16,17 +16,10 @@
  */
 package jease.cms.domain.property;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
-
-import jfix.db4o.Blob;
-
 public class FileProperty extends Property {
 
 	private String filename;
 	private String contentType;
-	private Blob blob = new Blob();
 
 	public FileProperty() {
 	}
@@ -57,30 +50,9 @@ public class FileProperty extends Property {
 		this.contentType = contentType;
 	}
 
-	public Blob getBlob() {
-		return blob;
-	}
 
-	public java.io.File getFile() {
-		return blob.getFile();
-	}
 
-	public long getSize() {
-		return super.getSize() + blob.getFile().length();
-	}
 
-	public FileProperty copy() {
-		FileProperty property = (FileProperty) super.copy();
-		property.setFilename(getFilename());
-		property.setContentType(getContentType());
-		try {
-			Files.copy(getFile().toPath(), property.getFile().toPath(),
-					StandardCopyOption.REPLACE_EXISTING);
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
-		return property;
-	}
 
 	public String toString() {
 		return filename;

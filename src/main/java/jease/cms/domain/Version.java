@@ -16,10 +16,9 @@
  */
 package jease.cms.domain;
 
-import java.util.Date;
+import jfix.relational.Persistent;
 
-import jfix.db4o.Blob;
-import jfix.db4o.Persistent;
+import java.util.Date;
 
 /**
  * A Version stores a content-revision within a blob. Additionally an info about
@@ -28,24 +27,18 @@ import jfix.db4o.Persistent;
 public class Version extends Persistent implements Persistent.Value {
 
 	private String info;
-	private Blob blob;
 
-	public Version(String info, Blob blob) {
+	public Version(String info) {
 		this.info = info;
-		this.blob = blob;
 	}
 
 	public String getInfo() {
 		return info;
 	}
 
-	public Blob getBlob() {
-		return blob;
-	}
 
 	public String toString() {
-		String lastModified = String.format("%1$tF %1$tT", new Date(blob
-				.getFile().lastModified()));
+		String lastModified = String.format("%1$tF %1$tT", new Date());
 		if (info != null) {
 			return String.format("%s (%s)", lastModified, info);
 		} else {

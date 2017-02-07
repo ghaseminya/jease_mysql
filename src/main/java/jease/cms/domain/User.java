@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import jfix.db4o.Persistent;
+import jfix.relational.Persistent;
 import jfix.util.Crypts;
 
 import org.apache.commons.lang3.ArrayUtils;

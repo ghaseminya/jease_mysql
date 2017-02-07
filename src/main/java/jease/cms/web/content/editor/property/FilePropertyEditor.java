@@ -33,14 +33,14 @@ public class FilePropertyEditor extends Mediafield implements
 	public FileProperty getProperty() {
 		property.setFilename(getName());
 		property.setContentType(getContentType());
-		copyToFile(property.getFile());
+		//copyToFile(property.getFile());
 		return property;
 	}
 
 	public void setProperty(FileProperty property) {
 		this.property = property;
-		setMedia(property.getFilename(), property.getContentType(),
-				property.getFile());
+		//setMedia(property.getFilename(), property.getContentType(),
+		//		property.getFile());
 	}
 
 }
