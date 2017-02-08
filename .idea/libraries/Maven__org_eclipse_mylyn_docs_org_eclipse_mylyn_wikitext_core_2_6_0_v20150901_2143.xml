@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.mylyn.docs:org.eclipse.mylyn.wikitext.core:2.6.0.v20150901-2143">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/docs/org.eclipse.mylyn.wikitext.core/2.6.0.v20150901-2143/org.eclipse.mylyn.wikitext.core-2.6.0.v20150901-2143.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/docs/org.eclipse.mylyn.wikitext.core/2.6.0.v20150901-2143/org.eclipse.mylyn.wikitext.core-2.6.0.v20150901-2143-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/mylyn/docs/org.eclipse.mylyn.wikitext.core/2.6.0.v20150901-2143/org.eclipse.mylyn.wikitext.core-2.6.0.v20150901-2143-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
