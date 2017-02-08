@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b658b8-4750-46cc-ab47-cba3d3791419" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_confluence_core_2_6_0_v20150901_2143.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_core_2_6_0_v20150901_2143.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_core_ant_2_10_1_v20161129_1925.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_markdown_core_2_6_0_v20150901_2143.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_mediawiki_core_2_6_0_v20150901_2143.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_textile_core_2_6_0_v20150901_2143.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_tracwiki_core_2_6_0_v20150625_2041.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_mylyn_docs_org_eclipse_mylyn_wikitext_twiki_core_2_6_0_v20150901_2143.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -789,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486548705337</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="remove xstream">
+      <created>1486548771611</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1486548771611</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -847,7 +843,8 @@
     <MESSAGE value="add travice" />
     <MESSAGE value="add travise" />
     <MESSAGE value="remove xstrean" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove xstrean" />
+    <MESSAGE value="remove xstream" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove xstream" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
