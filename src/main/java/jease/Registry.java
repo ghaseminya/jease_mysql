@@ -16,17 +16,15 @@
  */
 package jease;
 
-import com.thoughtworks.xstream.XStream;
+
+import db.util.Reflections;
 import jease.cmf.domain.Node;
 import jease.cmf.web.node.NodeEditor;
 import jease.cms.domain.Content;
 import jease.cms.domain.Parameter;
 import jease.cms.domain.property.Property;
 import jease.cms.web.content.editor.property.PropertyEditor;
-import db.util.Reflections;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.util.*;
 import java.util.function.Supplier;
 
@@ -72,19 +70,7 @@ public class Registry {
 	}
 
 	private static void init(String resource) throws Exception {
-		XStream xstream = new XStream();
-		xstream.alias("jease", List.class);
-		xstream.alias("component", Component.class);
-		Enumeration<URL> urls = Registry.class.getClassLoader().getResources(
-				resource);
-		while (urls.hasMoreElements()) {
-			InputStream url = urls.nextElement().openStream();
-			for (Component component : (List<Component>) xstream.fromXML(url)) {
-				components.put(component.domain, component);
-			}
-			url.close();
-		}
-		initDomainTypes(components.keySet());
+
 	}
 
 	private static void initDomainTypes(Set<String> domainClasses) {
