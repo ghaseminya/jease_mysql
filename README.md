@@ -1,5 +1,5 @@
 # Jease_mysql
-[![Build Status](https://travis-ci.org/mmghasemi/Jease_mysql.svg?branch=master)](https://travis-ci.org/mmghasemi/Jease_mysql)
+[![Build Status](https://travis-ci.org/ghaseminya/Jease_mysql.svg?branch=master)](https://travis-ci.org/ghaseminya/Jease_mysql)
 
 Create a SQL database vendor for jease
 
@@ -11,12 +11,12 @@ we need change all jfix package to new package for work with a relational databa
 Technologies
 ------------
 
-* [ZK](http://zk.org)
-* [Bootstrap](http://getbootstrap.com/)
 * [Hibernate](http://hibernate.org/)
-* [ICU4J](http://)
-* [xwiki](http://)
-* [Lucene](http://lucene.apache.com)
+* [ZK](https://www.zkoss.org/)
+* [Bootstrap RTL for mb-programmer](https://github.com/mb-programmer/modern-business-rtl)
+* [ICU4J](http://site.icu-project.org/)
+* [xwiki](http://www.xwiki.org/)
+* [Lucene](https://lucene.apache.org/core/corenews.html)
 
 
 
