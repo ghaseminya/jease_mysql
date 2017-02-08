@@ -17,3 +17,12 @@ Technologies
 * [ICU4J](http://)
 * [xwiki](http://)
 * [Lucene](http://lucene.apache.com)
+
+
+
+Admin panel + Home pages
+------------
+
+[Demo](http://demo.jease.ir) => http://jease.ir
+
+[Admin Demo](http://demo.jease.ir/cms) => http://demo.jease.ir/cms  username/password=mnm
