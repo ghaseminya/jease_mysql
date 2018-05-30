@@ -12,7 +12,7 @@ import java.util.Collection;
 public class PersistenceEngineMysql implements PersistenceEngine {
 
     public String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    final String DB_URL = "jdbc:mysql://localhost:3306/jease?useUnicode=true&characterEncoding=UTF-8";
+    final String DB_URL = "jdbc:mysql://185.:3306/jease?useUnicode=true&characterEncoding=UTF-8";
     Connection conn = null;
     Statement stmt = null;
     final String USER = "root";

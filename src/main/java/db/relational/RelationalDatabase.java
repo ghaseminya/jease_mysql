@@ -1,5 +1,8 @@
 package db.relational;
 
+import jease.Properties;
+import jease.cmf.web.JeaseSession;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -9,15 +12,22 @@ import java.util.List;
  * Created by mghasemy on 2/7/17.
  */
 public class RelationalDatabase {
-    public String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    final String DB_URL = "jdbc:mysql://localhost:3306/jease?useUnicode=true&characterEncoding=UTF-8";
+    public String JDBC_DRIVER = "";
+    public String DB_URL = "";
+    public String USER = "";
+    public String PASS = "";
+
+
     Connection conn = null;
     Statement stmt = null;
-    final String USER = "root";
-    final String PASS = "XXXX";
 
     public RelationalDatabase() {
         try {
+            Properties p=(Properties)JeaseSession.get("Properties");
+            JDBC_DRIVER=p.getDbjdbcdriver();
+            DB_URL=p.getDburl();
+            USER=p.getDbusermame();
+            PASS=p.getDbpassword();
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();

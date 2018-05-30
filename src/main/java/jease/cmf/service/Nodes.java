@@ -125,7 +125,7 @@ public class Nodes {
 	 * Saves all changes of a given node to database.
 	 */
 	public static void save(Node node) {
-		Processor.save.accept(node);
+		Database.;
 	}
 
 	/**
@@ -140,52 +140,6 @@ public class Nodes {
 	 * are delegated to Processor. Set a customized processor for save / delete
 	 * / traverse for logging, workflow, etc.pp.
 	 */
-	public static class Processor {
 
-		private static Save save = new Save();
-		private static Delete delete = new Delete();
-		private static Traverse traverse = new Traverse();
-
-		public static class Save implements Consumer<Node> {
-			public void accept(final Node node) {
-				Database.write(() -> {
-					node.markChanged();
-					root.processChangedNodes(traverse);
-				});
-			}
-		}
-
-		public static class Delete implements Consumer<Node> {
-			public void accept(final Node node) {
-				Database.write(() -> {
-					node.detach();
-					root.processChangedNodes(traverse);
-				});
-			}
-		}
-
-		public static class Traverse implements Consumer<Node> {
-			public void accept(Node node) {
-				if (isRooted(node)) {
-					Database.save("");
-				} else {
-					//Database.ext().deleteDeliberately(node);
-				}
-			}
-		}
-
-		public static void set(Save processor) {
-			save = processor;
-		}
-
-		public static void set(Delete processor) {
-			delete = processor;
-		}
-
-		public static void set(Traverse processor) {
-			traverse = processor;
-		}
-
-	}
 
 }

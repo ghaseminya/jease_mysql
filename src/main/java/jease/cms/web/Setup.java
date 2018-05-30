@@ -16,7 +16,9 @@
  */
 package jease.cms.web;
 
+import jease.Config;
 import jease.cmf.service.Nodes;
+import jease.cmf.web.JeaseSession;
 import jease.cms.domain.Folder;
 import jease.cms.domain.Text;
 import db.util.I18N;
@@ -42,6 +44,7 @@ public class Setup extends Div {
 	}
 
 	public void setupParameter() {
+		JeaseSession.set("Properties",new Config().load());
 		/*if (Database.query("").isEmpty()) {
 			for (Parameter parameter : new Parameter[] {
 					new Parameter(Names.JEASE_SITE_DESIGN, "simple"),
